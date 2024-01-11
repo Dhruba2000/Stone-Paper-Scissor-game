@@ -1,5 +1,5 @@
 import random
-
+import sys
 
 def gameWin(comp,you):
     if comp== "s" and you== "p":
@@ -26,6 +26,10 @@ elif RandomInput==2:
 elif RandomInput== 3:
     comp= "s"  
 you= input("Your Turn: Rock(r) Paper(p) or Scissor(s)?")
+if you not in ["r", "p", "s"]:
+        print("Invalid input. Please choose 'r', 'p', or 's'.")
+        sys.exit()
+        
 a= gameWin(comp,you)    
 print(f"computer choose {comp}")
 if a==None:
